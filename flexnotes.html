@@ -183,8 +183,59 @@ Design flexible and efficient layouts
   learning anything, learn what properties exist, and how they work / fit 
   together
 </p>
+<h2>
+  So let's now go over all the properties that can be 
+  applied to a flex container:
+</h2>
+<ul>
+  <li>
+   <u> DISPLAY:</u> The display property defines the flex 
+   container, and is mandatory to work with flexbox
+  </li>
+  <li>
+    <u>
+      FLEX-DIRECTION:
+    </u>
+    This defines the direction in which the flex-items are placed 
+    within the container
+  </li>
+  <li>
+    <u>
+      FLEX-WRAP:
+    </u>
+This is used to control the wrapping of items in a container
+  </li>
+  <li>
+    <u>
+      FLEX-FLOW:
 
-
+    </u>
+    This is used as a shortcut for combining FLEX-WRAP & FLEX-DIRECTION
+  </li>
+  <li>
+    <u>
+      JUSTIFY CONTENT:
+    </u>
+    Defines the alignment of the items along the main (x) axis
+  </li>
+  <li>
+    <u>
+      ALIGN-ITEMS:
+    </u>
+    Defines how items are laid out along the cross (y) axis
+  </li>
+  <li>
+    <u>
+      ALIGN-CONTENT:
+    </u>
+    This is similar to justify-content, the difference being this 
+    will align along the cross axis, instead of the main axis, BUT ALIGN-CONTENT 
+    ONLY WORKS WHEN THERE ARE MULTIPLE ROWS OF FLEX-ITEMS IN THE CONTAINER
+  </li>
+</ul>
+<p>
+  Now let's take a closer look at these properties
+</p>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
