@@ -11,11 +11,114 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="text-left">
+    <style>
+      body {
+        background-color: lightseagreen;
+        color: aliceblue;
+      }
+      p {
+        font-size: 20px;
+      }
+     .ul{
+      color:black;
+      padding-left: 0;
+    font-size: 20px;
+     }
+     li{
+      font-size: 20px;
+     }
+     .parent {
+  text-align: left;
+  
+}
+.parent > ul {
+  display: inline-block;
+}
+
+    </style>
     <h1>
       These are notes I'll be taking for Vishwas Gopinath Udemy course, it's a
       short course but I'm looking forward to improving my flexbox skills
     </h1>
+    <h2 class="mb-3">Course intro</h2>
+    <p>
+      Up first we'll go over what flexbox is, then in the rest of the course
+      we'll practice using flexbox to built layouts
+    </p>
+
+    <h3>So what is flexbox?</h3>
+    <p>
+      The CSS flexible box module aka FLEXBOX is a one-dimensional 
+      layout model that makes it easy to:
+      <div class="parent">
+        <ul>
+        <li>
+Design flexible and efficient layouts
+      </li>
+      <li>
+        Distribute space among items
+      </li>
+      <li>
+        Control their alignment in a given container
+      </li>
+    </ul>  
+   
+    </p>
+
+    <p>
+      Before flexbox there were four layout modes:
+    </p>
+    <ul>
+      <li>
+        <u>BLOCK</u> - For sections on a webpage
+      </li>
+      <li>
+        <u>
+          Inline
+        </u>
+         - For text
+        
+      </li>
+      <li>
+        <u>
+          Table</u> - For two-dimensional table data
+        
+      </li>
+      <li>
+      <u>
+        Positioned - 
+      </u>
+      For explicit position of an element
+      </li>
+    </ul>
+    <p>
+      But these layouts did not provide enough flexibility, we 
+      used to have to use all sorts of 'hacks' to get the layout 
+      the way we wanted, working with FLOATS, trying to VERTICALLY 
+      ALIGN the content, creating EQUAL HEIGHT COLUMNS, kind've a 
+      nightmare
+    </p>
+    <p>
+      BOOTSTRAP is build on top of the flex layout, and FLEXBOX 
+      itself is crucial to know for front-end developers in order 
+      to style pages responsively
+    </p>
+    <p>Why flexbox?</p>
+    <ul>
+      <li>
+        Lot's of flexibility
+      </li>
+      <li>
+        Arrange items more efficiently
+      </li>
+      <li>
+        Provide superior spacing
+      </li>
+      <li>
+        Help maintain proper alignment and order of items
+      </li>
+    </ul>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
