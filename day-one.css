@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+.container{
+    border: 6px solid black;
+    display: inline-flex;
+}
+.flex-item{
+    color:antiquewhite;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+.item-1{
+    background-color: olive;
+}
+.item-2{
+    background-color: lightsalmon;
+}
+.item-3{
+    background-color: navy;
+}
+.item-4{
+    background-color: lightpink;
+}
+.item-5{
+    background-color: lightgoldenrodyellow;
+}
+.item-6{
+    background-color: mediumaquamarine;
+}
+.item-7{
+    background-color: mediumslateblue;
+}
+.item-8{
+    background-color: lime;
+}
+.item-9{
+    background-color: crimson;
+}

@@ -11,11 +11,242 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="text-left">
+    <style>
+      body {
+        background-color: lightseagreen;
+        color: aliceblue;
+      }
+      p {
+        font-size: 20px;
+      }
+     .ul{
+      color:black;
+      padding-left: 0;
+    font-size: 20px;
+     }
+     li{
+      font-size: 20px;
+     }
+     .parent {
+  text-align: left;
+  
+}
+.parent > ul {
+  display: inline-block;
+}
+
+    </style>
     <h1>
       These are notes I'll be taking for Vishwas Gopinath Udemy course, it's a
       short course but I'm looking forward to improving my flexbox skills
     </h1>
+    <h2 class="mb-3">Course intro</h2>
+    <p>
+      Up first we'll go over what flexbox is, then in the rest of the course
+      we'll practice using flexbox to built layouts
+    </p>
+
+    <h3>So what is flexbox?</h3>
+    <p>
+      The CSS flexible box module aka FLEXBOX is a one-dimensional 
+      layout model that makes it easy to:
+      <div class="parent">
+        <ul>
+        <li>
+Design flexible and efficient layouts
+      </li>
+      <li>
+        Distribute space among items
+      </li>
+      <li>
+        Control their alignment in a given container
+      </li>
+    </ul>  
+   
+    </p>
+
+    <p>
+      Before flexbox there were four layout modes:
+    </p>
+    <ul>
+      <li>
+        <u>BLOCK</u> - For sections on a webpage
+      </li>
+      <li>
+        <u>
+          Inline
+        </u>
+         - For text
+        
+      </li>
+      <li>
+        <u>
+          Table</u> - For two-dimensional table data
+        
+      </li>
+      <li>
+      <u>
+        Positioned - 
+      </u>
+      For explicit position of an element
+      </li>
+    </ul>
+    <p>
+      But these layouts did not provide enough flexibility, we 
+      used to have to use all sorts of 'hacks' to get the layout 
+      the way we wanted, working with FLOATS, trying to VERTICALLY 
+      ALIGN the content, creating EQUAL HEIGHT COLUMNS, kind've a 
+      nightmare
+    </p>
+    <p>
+      BOOTSTRAP is build on top of the flex layout, and FLEXBOX 
+      itself is crucial to know for front-end developers in order 
+      to style pages responsively
+    </p>
+    <p>Why flexbox?</p>
+    <ul>
+      <li>
+        Lot's of flexibility
+      </li>
+      <li>
+        Arrange items more efficiently
+      </li>
+      <li>
+        Provide superior spacing
+      </li>
+      <li>
+        Help maintain proper alignment and order of items
+      </li>
+    </ul>
+    <h2>
+     <u> TERMINOLOGY: </u>
+    </h2>
+<p>
+  When we talk about flexbox, we mainly mean two entities:
+</p>
+<ul>
+  <li>
+    <u>
+      FLEX-CONTAINER: Our main flex space
+    </u>
+  </li>
+  <li>
+    <u>
+      FLEX-ITEMS: The immediate children elements of the flex container
+    </u>
+  </li>
+</ul>
+<p>
+  For ex: if we have 'div class='container' and inside we have < div > 
+  item 1 < / div > the 'item 1' is the flex-item, and the div class is 
+  our flex container
+</p>
+<p>
+  Now we also deal with FLEXBOX AXES
+</p>
+<ul>
+  <li>
+    MAIN AXIS, or X AXIS WHICH RUNS LEFT TO RIGHT ON OUR SCREEN
+  </li>
+  <li>
+    CROSS AXIS, or Y AXIS WHICH RUNS TOP TO BOTTOM ON OUR SCREEN
+  </li>
+</ul>
+<p>
+  The starting point of the main axis is titled: MAIN START
+</p>
+<p>
+  The end point of the main axis is titled: MAIN END 
+</p>
+<p>
+  And the length from the main start to the main end is called:
+  MAIN SIZE
+</p>
+<p>
+  So in general we say that flex items FLOW from main start to main end 
+  and take up the main size as the length
+</p>
+<p>
+  Similarly with the cross axis we have the top which is called:
+  CROSS START
+</p>
+<p>
+  The bottom of the axis called: CROSS END
+</p>
+<p>
+  And the distance between them is known as the: CROSS SIZE
+</p>
+<p>
+  Understanding flexbox is getting familiar with the properties 
+  associated with the flex container and the flex items, it's like 
+  learning anything, learn what properties exist, and how they work / fit 
+  together
+</p>
+<h2>
+  So let's now go over all the properties that can be 
+  applied to a flex container:
+</h2>
+<ul>
+  <li>
+   <u> DISPLAY:</u> The display property defines the flex 
+   container, and is mandatory to work with flexbox
+  </li>
+  <li>
+    <u>
+      FLEX-DIRECTION:
+    </u>
+    This defines the direction in which the flex-items are placed 
+    within the container
+  </li>
+  <li>
+    <u>
+      FLEX-WRAP:
+    </u>
+This is used to control the wrapping of items in a container
+  </li>
+  <li>
+    <u>
+      FLEX-FLOW:
+
+    </u>
+    This is used as a shortcut for combining FLEX-WRAP & FLEX-DIRECTION
+  </li>
+  <li>
+    <u>
+      JUSTIFY CONTENT:
+    </u>
+    Defines the alignment of the items along the main (x) axis
+  </li>
+  <li>
+    <u>
+      ALIGN-ITEMS:
+    </u>
+    Defines how items are laid out along the cross (y) axis
+  </li>
+  <li>
+    <u>
+      ALIGN-CONTENT:
+    </u>
+    This is similar to justify-content, the difference being this 
+    will align along the cross axis, instead of the main axis, BUT ALIGN-CONTENT 
+    ONLY WORKS WHEN THERE ARE MULTIPLE ROWS OF FLEX-ITEMS IN THE CONTAINER
+  </li>
+</ul>
+<p>
+  Now let's take a closer look at these properties
+</p>
+<h2>
+  DISPLAY
+</h2>
+<p>
+  Okay so I just finished the exercise, we first set up a container 
+  div in html with 9 divs, each with 'flex-item' and 'item 1' 
+  through 'item 9', then used inline-flex to shift them all into 
+  an inline flex container
+</p>
+
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
