@@ -4,9 +4,10 @@ body {
 .container{
     border: 6px solid black;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    height:400px;
+  
+    height:800px;
+    align-items: baseline;
+
 }
 .flex-item{
     color:antiquewhite;
@@ -16,12 +17,15 @@ body {
 }
 .item-1{
     background-color: olive;
+    padding-bottom: 3rem;
 }
 .item-2{
     background-color: lightsalmon;
+    padding-bottom: 5rem;
 }
 .item-3{
     background-color: navy;
+    font-size: 3rem;
 }
 .item-4{
     background-color: lightpink;
