@@ -319,6 +319,133 @@ This is used to control the wrapping of items in a container
   If we set align-items: baseline, the container will position 
   the items based on the text, so if we have text of 
 </p>
+<h2>
+  Flex Item properties
+</h2>
+<ul>
+  <li>
+    order
+  </li>
+  <p>
+    The order property controls the order in which an item appears
+    in the flex-container
+  </p>
+  <li>
+    flex-grow
+  </li>
+  <p>
+    The flex-grow property defines the ability for the flex-item
+    to grow if necessary
+  </p>
+  <li>
+    flex-shrink
+  </li>
+  <p>
+    The flex-shrink property allows a flex-item to shrink if 
+    necessary
+  </p>
+  <li>
+    flex-basis
+  </li>
+  <p>
+    The flex-basis property defines the initial main 
+    size of a flex-item
+  </p>
+  <li>
+    flex
+  </li>
+  <p>
+    We'll also look at the flex property itself, which is shorthand for 
+    all 3 (flex-grow, flex-shrink, flex-basis)
+  </p>
+  <li>
+    align-self
+  </li>
+  <p>
+    Then we'll wrap up with the align-self, which allows alignment of 
+    individual flex items
+  </p>
+</ul>
+<h2>
+  FLEX-ITEM PROPERTY: ORDER
+</h2>
+<p>
+  Flex-items appear in the order they are written in the source code,
+  this can be changed with the order property, we can use order on a specified 
+  item in our css, if we have item5 in a list of 9 items, and we give it order: 1,
+  it gets pushed to the end, this is because all of the other 8 items 
+  have a default order set to 0, and 0 is less than 1, so item 5 now appears 
+  after item9, and item 4 goes directly to item 6 because of the change
+</p>
+<p>
+  The order property takes an integer value, and changes the order 
+  of the items in the flex container
+</p>
+<h2>
+  FLEX-ITEM PROPERTY: FLEX GROW
+</h2>
+<p>
+  The flex property specifies what amount of space within the 
+  flex container the item should take up if necessary, and 
+  the flex grow factor is always relative to the size of the other 
+  items in the flex container 
+</p>
+<p>
+  This is often useful when you have extra space inside of a 
+  given container, and you want the items to GROW to take up 
+  the remaining space 
+</p>
+<p>
+  By default all flex-items have a flex-grow value set to 0, this 
+  is why they won't take up extra space if the container has any
+</p>
+<p>
+  Also if we use flex-grow on all of our items, the extra space 
+  will be evenly distributed among the flex items 
+</p>
+<p>
+  We can also set flex-grow to different sizes on each item if 
+  we'd like them to take up different amounts of space within 
+  our container
+</p>
+<h2>
+  FLEX-SHRINK
+</h2>
+<p>
+  This property allows a flex-item to shrink if necessary, 
+  the default value set to flex-shrink is 1, so if we have 
+  a flex container with 5 items, and we set item4 to flex-shrink:2, 
+  flex item4 will shrink 2x (twice) as fast as the other items, 
+  if we set it to 3, it would shrink 3x as fast 
+</p>
+<h2>
+  FLEX-BASIS
+</h2>
+<p>
+  The flex-basis property defines the initial size of an item 
+  inside of a container, BEFORE the extra space is distributed, 
+  this is used instead of the 'width' property, use flex-basis 
+  to set the initial width of the flex-item, flex-basis can use 
+  pixel values, percentages, or relative units, and it's default 
+  value is 'auto'
+</p>
+<h2>
+  FLEX
+</h2>
+<p>
+  This is a shorthand for all 3 (flex-grow, flex-shrink, and 
+  flex-basis). If we have: .item{ flex-grow: 2; flex-shrink: 5; 
+  flex-basis: 200px} we could just use flex and specify it like: 
+  .item{ flex: 2 5 200px}, and by default the flex is set to: .item{
+    flex: 0 1 auto;}
+</p>
+<h2>
+  Align-self
+</h2>
+<p>
+  This property is used to specify alignment of individual
+  flex items 
+</p>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
