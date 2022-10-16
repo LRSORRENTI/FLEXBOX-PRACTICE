@@ -446,6 +446,65 @@ This is used to control the wrapping of items in a container
   This property is used to specify alignment of individual
   flex items 
 </p>
+<h2>
+  List of practical use cases:
+</h2>
+<div class="container">
+  <p class="h3 text-center display-3">
+    Use cases
+    </p>
+    <ul>
+      <li class="h3">
+        Navbar
+      </li>
+      <li class="h3">
+        Center items
+      </li>
+      <li class="h3">
+        Unequal height columns, and card footers
+      </li>
+      <li class="h3">
+        Holy grail layout
+      </li>
+    </ul>
+</div>
+<div class="container">
+  <p class="h3">
+    A navbar is common way to navigate a webpage, where we have a list of 
+    items displayed as a horizontal bar
+  </p>
+  <p class="h3">
+    So let's practice building a navbar with flexbox
+  </p>
+<style>
+  .nav1{
+    font-size: 2rem;
+    background-color: antiquewhite;
+  }
+  .nav1 .ul1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color:black;
+  }
+  .nav1 .ul1 .li1{
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .nav1 .ul1 .li1:hover {
+  background-color: #555;
+  color: white;
+  }
+</style>
+  <nav class="nav1">
+    <ul class="ul1">
+      <li class="li1">Home</li>
+      <li class="li1">About</li>
+      <li class="li1">Services</li>
+      <li class="li1">Contact</li>
+    </ul>
+  </nav>
+</div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
