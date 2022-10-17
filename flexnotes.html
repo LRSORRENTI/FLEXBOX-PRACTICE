@@ -486,14 +486,26 @@ This is used to control the wrapping of items in a container
     margin: 0;
     padding: 0;
     color:black;
+    display: flex;
+    /* justify-content: space-around; */
   }
   .nav1 .ul1 .li1{
     cursor: pointer;
     padding: 0.5rem;
+    flex: auto;
+    text-align: center;
   }
   .nav1 .ul1 .li1:hover {
   background-color: #555;
   color: white;
+  }
+  @media all and (max-width: 700px){
+    .nav1 .ul1 {
+      flex-direction: column;
+    }
+    .nav1 .ul1 .li1{
+      text-align: center;
+    }
   }
 </style>
   <nav class="nav1">
@@ -502,8 +514,23 @@ This is used to control the wrapping of items in a container
       <li class="li1">About</li>
       <li class="li1">Services</li>
       <li class="li1">Contact</li>
+      <li class="li1">Additional info</li>
     </ul>
   </nav>
+</div>
+<div class="container">
+  <p class="h3">
+    So as a note here, we implement the '@media' all (max-width: 700px){
+      .nav1 .ul1{
+        flex-direction: column 
+      }
+      .nav1 .ul1 .li1 {
+        text-align: center
+      }
+    }, 
+    then those specified elements will shift to a column when the 
+    browswer shrinks below 700px, responsively
+  </p>
 </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
