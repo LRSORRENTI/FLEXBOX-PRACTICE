@@ -542,12 +542,13 @@ This is used to control the wrapping of items in a container
     align-items: center;
   }
   #item1{
-    height: 80px;
-    width: 80px;
+    height: auto;
+    width: auto;
     border: 3px solid orange;
     display: flex;
     justify-content: center;
     align-items: center;
+  
   }
   #htwo{
     display: flex;
@@ -569,9 +570,117 @@ This is used to control the wrapping of items in a container
 </div>
 <div class="container" id="cont1">
   <div class="item" id="item1">
-    Item
+    Display:flex, justify-content: center, align-items: center 
+    on everything!
   </div>
 </div>
+<style>
+  #cont2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+   margin-bottom: 40px;
+  }
+  .h2-2{
+    display:flex;
+    justify-content: center;
+  }
+  #hthree{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+</style>
+<div class="container" id="cont2">
+  <h2 class="h2-2">
+  <u><b>Variable heights</b></u>
+  </h2>
+
+</div>
+<p class="h3" id="hthree">
+  Let's start with something simple, placing two items side by side
+</p>
+<style>
+  #cont3{
+    font-size: 1.5rem;
+    display: flex;
+  }
+  #itemz{
+    background-color: firebrick;
+
+  }
+  #itemz1{
+    background-color:forestgreen;
+    
+  }
+</style>
+<div class="container" id="cont3">
+  <div id="itemz">Flex item</div>
+  <div id="itemz1">Lorem ipsum dolor sit amet consectetur
+     adipisicing elit. Repudiandae commodi fugit sapiente voluptates 
+     facere deserunt, fuga, adipisci excepturi quaerat modi molestiae
+      at. Aliquid beatae repudiandae eos quod sint a sunt.
+  Eius nulla recusandae corrupti numquam expedita? Consequuntur
+   libero voluptatibus cumque nostrum optio hic non perferendis alias, 
+   debitis soluta nobis molestiae repellendus nihil blanditiis quia 
+   dolores fugit sunt maiores eligendi fuga?
+  </div>
+
+</div>
+<style>
+  #h3-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+</style>
+<div class="container">
+<p class="h3" id="h3-2">
+  Just adding display: flex, our content will share the container 
+  space equally. But another scenario to look at is with card footers
+</p>
+</div>
+<style>
+  #cardz{
+    display: flex;
+  }
+  #cardz{
+    display: flex;
+    background-color: #555;
+    font-size: 1.5rem;
+    border: 4px solid black;
+    margin: 5px;
+    text-align: center;
+    flex-direction: column;
+    color: black;
+  }
+  #cardz #footerz{
+    padding: 5px;
+    background-color: olive;
+  }
+</style>
+<div class="container">
+  <div id="cardz">
+    <div id="body">
+      <p>This is a flex item</p>
+    </div>
+    <div  id="footerz">
+      Footer
+    </div>
+    <div  id="cardz">
+      <div id="body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quia quod, repudiandae a architecto exercitationem veniam
+         reiciendis voluptatibus veritatis illo maxime aliquid facere 
+         dolores nobis corporis,
+         dolor cum omnis excepturi deserunt?
+      </div>
+      <div id="footerz">Lorem footer</div>
+    </div>
+  </div>
+  </div>
+
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
